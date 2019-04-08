@@ -1,0 +1,9 @@
+#rename/copy this file to .env
+COOKIE_SECRET=your_cookie_secret
+CLOUDINARY_URL=cloudinary://your_cloudinary_url@keystone-demo
+
+MAILGUN_API_KEY=""
+MAILGUN_DOMAIN=""
+
+# replace __PASSWORD__ with the actual password
+MONGO_URI="mongodb://your_domain:__PASSWORD__@localhost:27017/your_domain"

@@ -1,0 +1,52 @@
+{
+  "name": "moxieusa",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "2.6.2",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^2.1.1",
+    "dotenv": "7.0.0",
+    "keystone": "4.0.0",
+    "keystone-email": "1.1.0",
+    "lodash": "^4.13.1",
+    "node-sass": "^4.11.0",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^1.18.10",
+    "pug": "2.0.3",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "eslint": "5.12.0",
+    "eslint-config-keystone": "3.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "webpack-cli": "^3.3.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "build-css": "node-sass client/ -o client/",
+    "build-js": "react-scripts build",
+    "watch-css": "npm run build-css && node-sass client/ -o client/ --watch --recursive",
+    "webpackDev": "webpack --watch --config webpack.config.dev.js",
+    "webpackProd": "webpack --config webpack.config.prod.js ",
+    "keystone": "nodemon server/keystone.js",
+    "dev": "clear; npm run keystone > /dev/null | npm run watch-css | npm run webpackDev",
+    "prod-build": "npm run build-css | npm run build-js",
+    "prod": "npm run keystone > /dev/null | npm run build-css | npm run build-js | npm run webpackProd"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
