@@ -2,6 +2,7 @@
 
 ## Prerequisites
 
+* KeystoneJS
 * ReactJS
 * NodeJS
 * MongoDB
@@ -58,10 +59,6 @@ http://localhost:3000/
 * [Bootstrap](https://getbootstrap.com/) - the CSS framework (included in Keystone)
 * [jQuery](https://jquery.com/) - the JS lib
 * [MongoDB](https://www.mongodb.com/) - the document database (required by Keystone)
-
-## Versioning
-
-use GitFlow
 
 ## Authors
 Steven Kulesza
